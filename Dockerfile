@@ -1,5 +1,8 @@
 FROM httpd:2.4
 
+# Copy the files
+COPY www /usr/local/apache2/htdocs
+
 # Install required OS tools
 RUN apt-get update; apt-get install -y perl git build-essential libcgi-session-perl curl imagemagick vim cpanminus
 
