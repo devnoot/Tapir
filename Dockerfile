@@ -7,10 +7,10 @@ RUN apt-get update; apt-get install -y perl git build-essential libcgi-session-p
 RUN cpanm --notest DateTime DateTime::Set DateTime::Format::Epoch Astro::PAL Astro::Coords HTML::Template HTML::Template::Expr JSON DateTime::Format::RFC3339 SVG::TT::Graph Tie::Handle::CSV LWP::Simple Text::CSV Switch Parallel::ForkManager
 
 # Remove existing htdocs content
-RUN rm -rf /usr/local/apache2/htdocs/*
+#RUN rm -rf /usr/local/apache2/htdocs/*
 
 # Download Tapir code into Apache htdocs webroot
-RUN git clone https://github.com/aruethe2/Tapir.git /usr/local/apache2/htdocs/
+#RUN git clone https://github.com/aruethe2/Tapir.git /usr/local/apache2/htdocs/
 
 # Download transit targets
 RUN curl -o /usr/local/apache2/htdocs/transit_targets.csv https://astro.swarthmore.edu/transits/transit_targets.csv
